@@ -1,1 +1,5 @@
-#Text 2 SQL Query
+# Project Name
+
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+
+## Overview
