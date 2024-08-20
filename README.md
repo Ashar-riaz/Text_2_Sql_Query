@@ -21,8 +21,8 @@ This project integrates various tools and libraries to process and manipulate da
 
 1. **Clone the repository:**
     ```bash
-    git clone https://github.com/yourusername/your-repository.git
-    cd your-repository
+    git clone [https://github.com/yourusername/your-repository.git](https://github.com/Ashar-riaz/Text_2_Sql_query.git
+    cd Text_2_Sql_query
     ```
 
 2. **Create a virtual environment and activate it:**
@@ -33,7 +33,7 @@ This project integrates various tools and libraries to process and manipulate da
 
 3. **Install the required packages:**
     ```bash
-    pip install -r requirements.txt
+    pip install -r requirement.txt
     ```
 
 4. **Set up environment variables:**
@@ -41,9 +41,13 @@ This project integrates various tools and libraries to process and manipulate da
 
 5. **Convert Excel to SQLite Database:**
     - Ensure that `automobile_dataset.xlsx` is in the project directory.
-    - Use the `sql.py` script to convert the Excel data into an SQLite database:
+    - Use the `sql.py` to check the database:
       ```bash
-      python sql.py
+      import pandas as pd
+      df = pd.read_excel('automobile_dataset.xlsx')
+      # Connect to SQLite database and store DataFrame as a SQL table
+      conn = sqlite3.connect('automobile.db')
+      df.to_sql('car', conn, if_exists='replace', index=False)
       ```
     - This script will create the `automobile.db` file.
 
@@ -71,3 +75,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Acknowledgments
 - Special thanks to the contributors of the open-source libraries used in this project.
+
+## Demo 
+
+
